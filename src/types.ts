@@ -145,6 +145,7 @@ export type TreeState<T> = TreeStateBase<T> & {
   extraAcceptTypes: string[];
   listComponent: ElementType;
   listItemComponent: ElementType;
+  renderEmptyList?: boolean;
   placeholderComponent: ElementType;
   sort: SortCallback<T> | boolean;
   insertDroppableFirst: boolean;
@@ -178,6 +179,7 @@ export type TreeProps<T = unknown> = TreeStateBase<T> & {
   enableAnimateExpand?: boolean;
   dropTargetOffset?: number;
   initialOpen?: InitialOpen;
+  renderEmptyList?: boolean;
   onChangeOpen?: ChangeOpenHandler;
   onDrop: (tree: NodeModel<T>[], options: DropOptions<T>) => void;
   canDrop?: (tree: NodeModel<T>[], options: DropOptions<T>) => boolean | void;
